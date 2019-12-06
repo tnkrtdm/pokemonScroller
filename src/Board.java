@@ -17,9 +17,9 @@ public class Board extends JPanel implements ActionListener {
     private List<Item> items;
     private boolean ingame;
     private final int STARTING_X = 40;
-    private final int STARTING_Y = new Random().nextInt(550) + 50;
-    private final int B_WIDTH = 700;
-    private final int B_HEIGHT = 700;
+    private final int STARTING_Y = new Random().nextInt(800) + 50;
+    private final int B_WIDTH = 850;
+    private final int B_HEIGHT = 850;
     private final int DELAY = 15;
     private AnimationHandler aH;
     private Image hp;
@@ -34,15 +34,15 @@ public class Board extends JPanel implements ActionListener {
     }
 
     private void setupItemLoc() {
-        for (int i = 0; i <= 20; i++) {
-            itemLoc.add(makePos(true));
+        for (int i = 0; i <= 8; i++) {
+            itemLoc.add(makePos(false));
         }
     }
 
     private List<Integer> makePos(boolean NPCorItem) {
         return NPCorItem ?
-                new ArrayList<>(Arrays.asList(new Random().nextInt(700) + 720, new Random().nextInt(570) + 50)) :
-                new ArrayList<>(Arrays.asList(new Random().nextInt(640) + 10, new Random().nextInt(570) + 50));
+                new ArrayList<>(Arrays.asList(new Random().nextInt(850) + 850, new Random().nextInt(785) + 50)) :
+                new ArrayList<>(Arrays.asList(new Random().nextInt(785) + 50, new Random().nextInt(785) + 50));
     }
 
     protected Board() {
@@ -65,6 +65,7 @@ public class Board extends JPanel implements ActionListener {
         setupNPCLoc();
         initNPCs();
 
+        setupItemLoc();
         initItems();
 
         timer = new Timer(DELAY, this);
@@ -149,7 +150,7 @@ public class Board extends JPanel implements ActionListener {
             }
         }
 
-        g.drawString("Pokémon left: " + npcs.size(), 305, 15);
+        g.drawString("Pokémon left: " + npcs.size(), 750, 15);
     }
 
     private void loadImages() {

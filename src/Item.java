@@ -2,7 +2,6 @@ import java.util.Random;
 
 public class Item extends Entity {
 
-    private final int BOARD_WIDTH = 700;
     private final ItemType type;
 
     public Item(int x, int y) {

@@ -2,14 +2,14 @@ import java.util.Random;
 
 public class Projectile extends Entity {
 
-    private final int BOARD_WIDTH = 700;
+    private final int BOARD_WIDTH = 850;
     private int PROJECTILE_SPEED = 2;
     private ProjectileType type;
 
     public Projectile(int x, int y) {
         super(x, y);
 
-        if ((new Random().nextInt(10) + 1) < 9) {
+        if ((new Random().nextInt(20) + 1) < 19) {
             type = ProjectileType.BULLET_SEED;
         } else {
             type = ProjectileType.SOLARBEAM;

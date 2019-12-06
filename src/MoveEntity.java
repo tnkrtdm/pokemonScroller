@@ -13,7 +13,7 @@ public class MoveEntity extends JFrame {
         add(new Board());
 
         setTitle("Moving sprite");
-        setSize(700, 700);
+        setSize(850, 850);
 
         setLocationRelativeTo(null);
         setResizable(false);

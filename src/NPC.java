@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class NPC extends Entity {
 
-    private final int INITIAL_X = 700;
+    private final int INITIAL_X = 850;
 
     public NPC(int x, int y) {
         super(x, y);
@@ -11,7 +11,7 @@ public class NPC extends Entity {
     }
 
     private void initNPC() {
-        switch (new Random().nextInt(3) + 1) {
+        switch (new Random().nextInt(4 + 1)) {
             case (0):
                 loadImage("resources/magikarp.png");
                 break;
