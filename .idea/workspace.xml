@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4262afdf-c8af-4c87-9144-cb25a7a1c6a5" name="Default Changelist" comment="" />
+    <list default="true" id="4262afdf-c8af-4c87-9144-cb25a7a1c6a5" name="Default Changelist" comment="Added Projectile Enum&#10;Added Solarbeam Projectile">
+      <change afterPath="$PROJECT_DIR$/src/ProjectileType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Board$TAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Board$TAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/META-INF/Bulbasaur's Adventure.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Projectile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Projectile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Projectile.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,21 +20,22 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="ProjectId" id="1UOhbwdVi2cTpCdaWVjGNLaBm8S" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/git-cmd.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.4083045" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -75,10 +85,16 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added Projectile Enum&#10;Added Solarbeam Projectile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Projectile Enum&#10;Added Solarbeam Projectile" />
   </component>
 </project>

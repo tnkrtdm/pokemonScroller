@@ -41,11 +41,11 @@ public class Board extends JPanel implements ActionListener {
 
     private List<Integer> makePos(boolean NPCorItem) {
         return NPCorItem ?
-                new ArrayList<Integer>(Arrays.asList(new Random().nextInt(700) + 720, new Random().nextInt(570) + 50)) :
-                new ArrayList<Integer>(Arrays.asList(new Random().nextInt(640) + 10, new Random().nextInt(570) + 50));
+                new ArrayList<>(Arrays.asList(new Random().nextInt(700) + 720, new Random().nextInt(570) + 50)) :
+                new ArrayList<>(Arrays.asList(new Random().nextInt(640) + 10, new Random().nextInt(570) + 50));
     }
 
-    public Board() {
+    protected Board() {
 
         initBoard();
     }
@@ -110,6 +110,7 @@ public class Board extends JPanel implements ActionListener {
 
         g.drawImage(getBGImage(), 0, 0, this);
 
+        // Draw HitPoints
         if (player.isVisible()) {
             g.drawImage(player.getImage(), player.getX(), player.getY(), this);
             g.drawString("HP: ", 5, 15);
@@ -128,10 +129,12 @@ public class Board extends JPanel implements ActionListener {
             }
         }
 
+        // Draw Items
         for (Entity item : items) {
             g.drawImage(item.getImage(), item.getX(), item.getY(), this);
         }
 
+        // Draw Projectiles
         List<Projectile> projectiles = player.getProjectiles();
 
         for (Projectile projectile : projectiles) {
@@ -149,18 +152,18 @@ public class Board extends JPanel implements ActionListener {
         g.drawString("Pokémon left: " + npcs.size(), 305, 15);
     }
 
-    protected void loadImages() {
+    private void loadImages() {
         ImageIcon ii = new ImageIcon("resources/hitpoint.png");
         ImageIcon jj = new ImageIcon("resources/bg.png");
         hp = ii.getImage();
         bg = jj.getImage();
     }
 
-    public Image getHPImage() {
+    private Image getHPImage() {
         return hp;
     }
 
-    public Image getBGImage() {
+    private Image getBGImage() {
         return bg;
     }
 
@@ -257,24 +260,25 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-    public void checkCollisions() {
+    private void checkCollisions() {
 
         Rectangle r3 = player.getBounds();
 
-        for (Item item : items) {
+        List<Projectile> ms = player.getProjectiles();
 
-            Rectangle r4 = item.getBounds();
+        for (Projectile m : ms) {
 
-            if (r3.intersects(r4) && item.getType() == ItemType.RARE_CANDY) {
-                player.evolve();
-                item.setVisible(false);
+            Rectangle r1 = m.getBounds();
+            for (NPC npc : npcs) {
+
+                Rectangle r2 = npc.getBounds();
+
+                if (r1.intersects(r2)) {
+                    System.out.println("> Projectile collided with NPC");
+                    m.setVisible(false);
+                    npc.setVisible(false);
+                }
             }
-
-            if (r3.intersects(r4) && item.getType() == ItemType.POTION) {
-                player.incHP(1);
-                item.setVisible(false);
-            }
-
         }
 
         for (NPC npc : npcs) {
@@ -293,21 +297,20 @@ public class Board extends JPanel implements ActionListener {
             }
         }
 
-        List<Projectile> ms = player.getProjectiles();
+        for (Item item : items) {
 
-        for (Projectile m : ms) {
+            Rectangle r4 = item.getBounds();
 
-            Rectangle r1 = m.getBounds();
-            for (NPC npc : npcs) {
-
-                Rectangle r2 = npc.getBounds();
-
-                if (r1.intersects(r2)) {
-                    System.out.println("> Projectile collided with NPC");
-                    m.setVisible(false);
-                    npc.setVisible(false);
-                }
+            if (r3.intersects(r4) && item.getType() == ItemType.RARE_CANDY) {
+                player.evolve();
+                item.setVisible(false);
             }
+
+            if (r3.intersects(r4) && item.getType() == ItemType.POTION) {
+                player.incHP(1);
+                item.setVisible(false);
+            }
+
         }
     }
 
