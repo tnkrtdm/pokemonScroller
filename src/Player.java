@@ -5,32 +5,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.awt.event.KeyEvent;
 
-public class Player extends Entity {
+public class Player extends Pokemon {
 
     private int dx;
     private int dy;
     private List<Projectile> projectiles;
     private List<Item> items;
-    private int hp;
     private boolean state;
-    private int evolutionaryState;
 
     public Player(int x, int y) {
         super(x, y);
         initPlayer();
-        hp = 5;
         state = true;
-        evolutionaryState = 1;
     }
 
     public void initPlayer() {
         projectiles = new ArrayList<>();
         loadImage("resources/bulbasaur.png");
         getImageDimensions();
-    }
-
-    public int getHP() {
-        return hp;
     }
 
     public boolean getState() {
@@ -41,27 +33,23 @@ public class Player extends Entity {
         state = b;
     }
 
-    public void evolve() {
-        if (evolutionaryState == 1) {
-            loadImage("resources/ivysaur.png");
-            evolutionaryState++;
-        }
-        else if (evolutionaryState == 2) {
-            loadImage("resources/venusaur.png");
-            evolutionaryState++;
-        }
-    }
+//    public void evolve() {
+//        if (evolutionaryState == 1) {
+//            loadImage("resources/ivysaur.png");
+//            evolutionaryState++;
+//        }
+//        else if (evolutionaryState == 2) {
+//            loadImage("resources/venusaur.png");
+//            evolutionaryState++;
+//        }
+//    }
 
-    public void incHP (int amount) {
-        hp += amount;
-    }
-
-    public void decHP (int amount) {
-        hp -= amount;
-        //ah.blink(this);
-        Timer timer = new Timer(3000, actionEvent -> setState(true));
-        timer.start();
-    }
+//    public void decHP (int amount) {
+//        hp -= amount;
+//        //ah.blink(this);
+//        Timer timer = new Timer(3000, actionEvent -> setState(true));
+//        timer.start();
+//    }
 
     public void move() {
 

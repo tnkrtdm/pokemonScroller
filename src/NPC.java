@@ -1,12 +1,11 @@
 import java.util.Random;
 
-public class NPC extends Entity {
+public class NPC extends Pokemon {
 
     private final int INITIAL_X = 850;
 
     public NPC(int x, int y) {
         super(x, y);
-
         initNPC();
     }
 
