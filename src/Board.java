@@ -157,6 +157,11 @@ public class Board extends JPanel implements ActionListener {
             }
         }
 
+        // Draw Stats
+
+
+        // Draw Moves
+
         g.drawString("Pokémon left: " + npcs.size(), 750, 15);
     }
 

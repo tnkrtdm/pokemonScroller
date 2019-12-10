@@ -13,12 +13,6 @@ public class Projectile extends Entity {
     public Projectile(int x, int y) {
         super(x, y);
 
-        if ((new Random().nextInt(20) + 1) < 19) {
-            type = ProjectileType.BULLET_SEED;
-        } else {
-            type = ProjectileType.SOLARBEAM;
-        }
-
         initProjectile();
     }
 

@@ -38,8 +38,8 @@ public class Player extends Pokemon {
         setSpriteSlot3("resources/venusaur.png");
         setTyping(Typing.GRASS, Typing.POISON);
         setMoveSet(new ArrayList<Move>(Arrays.asList(
-                new Move("Bullet Seed", 20, 25, Typing.GRASS),
-                new Move("Poison Powder", 10, 5, Typing.POISON),
+                new Move("Bullet Seed", 20, 25, Typing.GRASS, "resources/bulletSeed.png"),
+                new Move("Poison Powder", 10, 5, Typing.POISON, null),
                 null,
                 null
         )));
@@ -137,6 +137,13 @@ public class Player extends Pokemon {
     }
 
     public void fire() {
+        projectiles.add(new Projectile(x + width, y + height / 2));
+    }
+
+    // Get the move data, check for remaining PP, how much damage the projectile will do, and the typing
+    public void moveSlot1() {
+        Move move = getMoveSet().get(0);
+
         projectiles.add(new Projectile(x + width, y + height / 2));
     }
 
