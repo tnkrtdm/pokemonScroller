@@ -1,3 +1,7 @@
+package Assets.Entity.Move;
+
+import Assets.Entity.Entity;
+
 import java.util.Random;
 
 public class Projectile extends Entity {

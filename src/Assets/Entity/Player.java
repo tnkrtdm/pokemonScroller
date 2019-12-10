@@ -1,7 +1,12 @@
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+package Assets.Entity;
+
+import Assets.Entity.Item.Item;
+import Assets.Entity.Move.Move;
+import Assets.Entity.Move.Projectile;
+import Assets.Typing;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.awt.event.KeyEvent;
 
@@ -17,6 +22,27 @@ public class Player extends Pokemon {
         super(x, y);
         initPlayer();
         state = true;
+    }
+
+    public void initPokemon() {
+        setName("Bulbasaur");
+        setHP(50);
+        setMaxHP(50);
+        setLevel(1);
+        setEXP(0);
+        setMaxEXP(40);
+        setEvolutionaryState(1);
+        setEvolutionaryStateMax(3);
+        setSpriteSlot1("resources/bulbasaur.png");
+        setSpriteSlot2("resources/ivysaur.png");
+        setSpriteSlot3("resources/venusaur.png");
+        setTyping(Typing.GRASS, Typing.POISON);
+        setMoveSet(new ArrayList<Move>(Arrays.asList(
+                new Move("Bullet Seed", 20, 25, Typing.GRASS),
+                new Move("Poison Powder", 10, 5, Typing.POISON),
+                null,
+                null
+        )));
     }
 
     public void initPlayer() {
@@ -72,6 +98,22 @@ public class Player extends Pokemon {
     public void keyPressed(KeyEvent e) {
 
         int key = e.getKeyCode();
+
+        if (key == KeyEvent.VK_1) {
+
+        }
+
+        if (key == KeyEvent.VK_2) {
+
+        }
+
+        if (key == KeyEvent.VK_3) {
+
+        }
+
+        if (key == KeyEvent.VK_4) {
+
+        }
 
         if (key == KeyEvent.VK_SPACE) {
             fire();

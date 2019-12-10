@@ -1,3 +1,5 @@
+package Assets;
+
 public enum Typing {
     NORMAL,
     FIRE,

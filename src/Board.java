@@ -1,3 +1,10 @@
+import Assets.Entity.Entity;
+import Assets.Entity.Item.ItemType;
+import Assets.Entity.NPC;
+import Assets.Entity.Player;
+import Assets.Entity.Item.Item;
+import Assets.Entity.Move.Projectile;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -131,7 +138,7 @@ public class Board extends JPanel implements ActionListener {
         }
 
         // Draw Items
-        for (Entity item : items) {
+        for (Item item : items) {
             g.drawImage(item.getImage(), item.getX(), item.getY(), this);
         }
 
@@ -275,7 +282,7 @@ public class Board extends JPanel implements ActionListener {
                 Rectangle r2 = npc.getBounds();
 
                 if (r1.intersects(r2)) {
-                    System.out.println("> Projectile collided with NPC");
+                    System.out.println("> Assets.Entity.Move.Projectile collided with Assets.Entity.NPC");
                     m.setVisible(false);
                     npc.setVisible(false);
                 }
@@ -287,13 +294,13 @@ public class Board extends JPanel implements ActionListener {
             Rectangle r2 = npc.getBounds();
 
             if (r3.intersects(r2)) {
-                System.out.println("> Player collided with NPC");
+                System.out.println("> Assets.Entity.Player collided with Assets.Entity.NPC");
                 if (player.getHP() < 1) {
                     ingame = false;
                 }
                 if (player.getState()) {
                     player.setState(false);
-                    player.decHP(1);
+                    //player.decHP(1);
                 }
             }
         }

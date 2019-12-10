@@ -1,3 +1,8 @@
+package Assets.Entity.Move;
+
+import Assets.Entity.Entity;
+import Assets.Typing;
+
 public class Move {
 
     private String moveName;
@@ -5,6 +10,14 @@ public class Move {
     private int totalPP;
     private int damage;
     private Typing type;
+
+    public Move(String moveName, int currentPP, int damage, Typing type) {
+        this.moveName = moveName;
+        this.currentPP = currentPP;
+        this.totalPP = currentPP;
+        this.damage = damage;
+        this.type = type;
+    }
 
     public int getCurrentPP() {return currentPP;}
 

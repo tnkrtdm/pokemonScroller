@@ -1,3 +1,7 @@
+package Assets.Entity.Item;
+
+import Assets.Entity.Entity;
+
 import java.util.Random;
 
 public class Item extends Entity {

@@ -1,3 +1,5 @@
+package Assets.Entity;
+
 import java.util.Random;
 
 public class NPC extends Pokemon {
