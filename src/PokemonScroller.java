@@ -1,9 +1,9 @@
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 
-public class BulbasaursAdventure extends JFrame {
+public class PokemonScroller extends JFrame {
 
-    public BulbasaursAdventure() {
+    public PokemonScroller() {
 
         initUI();
     }
@@ -15,7 +15,7 @@ public class BulbasaursAdventure extends JFrame {
         setResizable(false);
         pack();
 
-        setTitle("Bulbasaur's Adventure");
+        setTitle("Pokémon Scroller");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
@@ -23,7 +23,7 @@ public class BulbasaursAdventure extends JFrame {
     public static void main(String[] args) {
 
         EventQueue.invokeLater(() -> {
-            BulbasaursAdventure fc = new BulbasaursAdventure();
+            PokemonScroller fc = new PokemonScroller();
             fc.setVisible(true);
         });
     }

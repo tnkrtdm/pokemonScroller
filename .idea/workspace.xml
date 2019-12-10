@@ -2,11 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4262afdf-c8af-4c87-9144-cb25a7a1c6a5" name="Default Changelist" comment="Added Projectile Enum&#10;Added Solarbeam Projectile&#10;Cleaned up method access">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Entity/Move/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Entity/Move/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bulbasaur's Adventure.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Pokémon Scroller.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/AnimationHandler$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/AnimationHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/Item/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/Item/ItemType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/Move/Move.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/Move/MoveSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/Move/Moves.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/Move/Projectile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/Move/ProjectileType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/NPC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Entity/Pokemon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Assets/Typing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Board$TAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/Board.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/BulbasaursAdventure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Bulbasaur's Adventure/MoveEntity.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Assets/Entity/Move/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Entity/Move/Projectile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Assets/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Assets/Entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BulbasaursAdventure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PokemonScroller.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +69,11 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Bulbasaur's Adventure" type="Application" factoryName="Application">
+    <configuration name="Pokemon Scroller" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11.0.3" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="BulbasaursAdventure" />
-      <module name="Bulbasaur's Adventure" />
+      <option name="MAIN_CLASS_NAME" value="PokemonScroller" />
+      <module name="Pokémon Scroller" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -63,6 +81,53 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="11.0.3" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="Pokémon Scroller" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="Pokémon Scroller" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
