@@ -89,7 +89,7 @@ public class Pokemon extends Entity {
                 setMaxEXP(maxEXP * 2); // Increase Max EXP
                 evolutionaryState++;
             }
-            if (evolutionaryState == 2) {
+            else if (evolutionaryState == 2) {
                 loadImage(spriteSlot3); // Load sprite of evolution
                 setEXP(0); // Reset EXP
                 setMaxEXP(maxEXP * 2); // Increase Max EXP

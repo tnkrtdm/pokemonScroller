@@ -162,7 +162,7 @@ public class Board extends JPanel implements ActionListener {
         }
 
         // Draw Stats
-
+        g.drawString("Current EXP: " + player.getEXP() + " / " + player.getMaxEXP(), 5, 30);
 
         // Draw Moves
         g.drawString("Pokémon left: " + npcs.size(), 750, 15);
@@ -282,6 +282,11 @@ public class Board extends JPanel implements ActionListener {
 
         List<Projectile> ms = player.getProjectiles();
 
+        if (player.getEXP() >= player.getMaxEXP()) {
+            player.evolve();
+            System.out.println("> Player Evolved!");
+        }
+
         for (Projectile m : ms) {
 
             Rectangle r1 = m.getBounds();
@@ -291,6 +296,7 @@ public class Board extends JPanel implements ActionListener {
 
                 if (r1.intersects(r2)) {
                     System.out.println("> Projectile collided with NPC");
+                    player.setEXP(player.getEXP()+20);
                     m.setVisible(false);
                     npc.setVisible(false);
                 }
@@ -319,7 +325,7 @@ public class Board extends JPanel implements ActionListener {
             Rectangle r4 = item.getBounds();
 
             if (r3.intersects(r4) && item.getType() == ItemType.RARE_CANDY) {
-                player.evolve();
+                player.setEXP(player.getEXP() + 40);
                 item.setVisible(false);
             }
 

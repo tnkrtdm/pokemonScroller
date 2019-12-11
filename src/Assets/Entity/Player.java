@@ -32,7 +32,7 @@ public class Player extends Pokemon {
         setMaxHP(50);
         setLevel(1);
         setEXP(0);
-        setMaxEXP(40);
+        setMaxEXP(100);
         setEvolutionaryState(1);
         setEvolutionaryStateMax(3);
         setSpriteSlot1("resources/bulbasaur.png");
@@ -73,7 +73,7 @@ public class Player extends Pokemon {
 //    }
 
     public void decHP (int amount) {
-        incHP(-amount);
+        setHP(getHP()-10);
         //ah.blink(this);
         Timer timer = new Timer(3000, actionEvent -> setState(true));
         timer.start();
@@ -85,11 +85,11 @@ public class Player extends Pokemon {
         y += dy;
 
         if (x < 1) {
-            x = 1;
+            x = 3;
         }
 
         if (y < 1) {
-            y = 1;
+            y = 3;
         }
     }
 
