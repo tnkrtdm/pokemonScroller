@@ -5,6 +5,7 @@ import Assets.Entity.Move.Move;
 import Assets.Entity.Move.Projectile;
 import Assets.Typing;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,6 +21,7 @@ public class Player extends Pokemon {
 
     public Player(int x, int y) {
         super(x, y);
+        initPokemon();
         initPlayer();
         state = true;
     }
@@ -47,7 +49,7 @@ public class Player extends Pokemon {
 
     public void initPlayer() {
         projectiles = new ArrayList<>();
-        loadImage("resources/bulbasaur.png");
+        loadImage(getSpriteSlot1());
         getImageDimensions();
     }
 
@@ -70,12 +72,12 @@ public class Player extends Pokemon {
 //        }
 //    }
 
-//    public void decHP (int amount) {
-//        hp -= amount;
-//        //ah.blink(this);
-//        Timer timer = new Timer(3000, actionEvent -> setState(true));
-//        timer.start();
-//    }
+    public void decHP (int amount) {
+        incHP(-amount);
+        //ah.blink(this);
+        Timer timer = new Timer(3000, actionEvent -> setState(true));
+        timer.start();
+    }
 
     public void move() {
 

@@ -1,4 +1,5 @@
 import java.awt.EventQueue;
+import java.io.IOException;
 import javax.swing.JFrame;
 
 public class PokemonScroller extends JFrame {

@@ -33,6 +33,7 @@ public class Board extends JPanel implements ActionListener {
     private Image bg;
     private List<List<Integer>> npcLoc = new ArrayList<>();
     private List<List<Integer>> itemLoc = new ArrayList<>();
+    private int hpDrawLoc = 30;
 
     private void setupNPCLoc() {
         for (int i = 0; i <= 20; i++) {
@@ -53,7 +54,6 @@ public class Board extends JPanel implements ActionListener {
     }
 
     protected Board() {
-
         initBoard();
     }
 
@@ -79,7 +79,7 @@ public class Board extends JPanel implements ActionListener {
         timer.start();
     }
 
-    private  void initNPCs() {
+    private void initNPCs() {
         npcs = new ArrayList<>();
 
         for (int i = 0; i < npcLoc.size(); i++) {
@@ -87,7 +87,7 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-    private  void initItems() {
+    private void initItems() {
         items = new ArrayList<>();
 
         for (int i = 0; i < itemLoc.size(); i++) {
@@ -123,6 +123,10 @@ public class Board extends JPanel implements ActionListener {
             g.drawImage(player.getImage(), player.getX(), player.getY(), this);
             g.drawString("HP: ", 5, 15);
             g.drawImage(getHPImage(), 30, 5, this);
+//            for (int i = 0; i < player.getHP(); i++) {
+//                hpDrawLoc += 15;
+//                g.drawImage(getHPImage(), hpDrawLoc, 5, this);
+//            }
             if (player.getHP() > 1) {
                 g.drawImage(getHPImage(), 45, 5, this);
                 if (player.getHP() > 2) {
@@ -161,7 +165,6 @@ public class Board extends JPanel implements ActionListener {
 
 
         // Draw Moves
-
         g.drawString("Pokémon left: " + npcs.size(), 750, 15);
     }
 
@@ -287,7 +290,7 @@ public class Board extends JPanel implements ActionListener {
                 Rectangle r2 = npc.getBounds();
 
                 if (r1.intersects(r2)) {
-                    System.out.println("> Assets.Entity.Move.Projectile collided with Assets.Entity.NPC");
+                    System.out.println("> Projectile collided with NPC");
                     m.setVisible(false);
                     npc.setVisible(false);
                 }
@@ -299,13 +302,14 @@ public class Board extends JPanel implements ActionListener {
             Rectangle r2 = npc.getBounds();
 
             if (r3.intersects(r2)) {
-                System.out.println("> Assets.Entity.Player collided with Assets.Entity.NPC");
+                System.out.println("> Player collided with NPC");
                 if (player.getHP() < 1) {
                     ingame = false;
                 }
                 if (player.getState()) {
                     player.setState(false);
-                    //player.decHP(1);
+                    player.decHP(15);
+                    hpDrawLoc -= 15;
                 }
             }
         }

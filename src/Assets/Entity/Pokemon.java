@@ -67,11 +67,11 @@ public class Pokemon extends Entity {
 
     public void setSpriteSlot3(String value) { spriteSlot3 = value; }
 
-    public String getSpriteSlot1(String value) { return spriteSlot1; }
+    public String getSpriteSlot1() { return spriteSlot1; }
 
-    public String getSpriteSlot2(String value) { return spriteSlot2; }
+    public String getSpriteSlot2() { return spriteSlot2; }
 
-    public String getSpriteSlot3(String value) { return spriteSlot3; }
+    public String getSpriteSlot3() { return spriteSlot3; }
 
     public void setTyping(Typing type1, Typing type2) { this.type1 = type1; this.type2 = type2; }
 
